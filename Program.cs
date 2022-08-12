@@ -3,8 +3,7 @@
 6 -> да
 7 -> да
 1 -> нет*/
-Console.Write("Введи число:");
-int number = Convert.ToInt16(Console.ReadLine());
+int number = ReadInt(" Введи число:");
 
 if(number == 6 || number == 7)
 {
@@ -13,4 +12,10 @@ if(number == 6 || number == 7)
 else
 {
     Console.WriteLine("Нет");
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
